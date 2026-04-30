@@ -8,7 +8,6 @@ void displayheader(){
     printf("2. Pengurangan\n");
     printf("3. Perkalian\n");
     printf("4. Pembagian\n");
-    printf("5. Ganjil/Genap\n");
     printf("0. Keluar\n");
 }
 
@@ -36,6 +35,30 @@ float pembagian (float input1, float input2){
 }
 
 int main (){
+    float input1, input2, result;
+    int angka, choice;
 
+    do{
+        displayheader ();
+        printf("Masukkan PIlihan: ");
+        scanf("%d", &choice);
+
+        switch (choice){
+        case 1:
+            printf("\n===== Penjumlahan =====\n");
+            printf("Masukkan Angka Pertama: ");
+            scanf("%f", &input1);
+            printf("Masukkan Angka Kedua: ");
+            scanf("%f", &input2);
+
+            result = penjumlahan(input1, input2);
+            printf("Hasil %.2f + %.2f = %.2f\n", input1, input2, result);
+            break;
+            
+        default:
+            printf("Pilihan Tidak Valid! Coba lagi\n");
+            break;
+        }
+    }while(choice != 0);
     return 0;
 }
