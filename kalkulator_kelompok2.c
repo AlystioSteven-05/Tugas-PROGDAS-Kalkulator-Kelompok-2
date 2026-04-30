@@ -54,20 +54,36 @@ int main (){
         scanf("%d %d", &input1, &input2);
         result = penjumlahan(input1, input2);
         printf("Hasil:  %f", result);
+        break;
         case 2:
         printf("Masukkan kedua angka: ");
         scanf("%d %d", &input1, &input2);
         result = pengurangan(input1, input2);
         printf("Hasil:  %f", result);
+        break;
         case 3:
         printf("Masukkan kedua angka: ");
         scanf("%d %d", &input1, &input2);
         result = perkalian(input1, input2);
         printf("Hasil:  %f", result);
+        break;
         case 4:
+        printf("Masukkan kedua angka: ");
+        scanf("%d %d", &input1, &input2);
+        result = pembagian(input1, input2);
+        printf("Hasil:  %f", result);
+        break;
         case 5:
+        printf("Masukkan kedua angka: ");
+        scanf("%d %d", &input1, &input2);
+        result = pangkat(input1, input2);
+        printf("Hasil:  %f", result);
+        break;
         case 6:
+        printf("Terima Kasih\n");
+        break;
         default:
+        printf("Input Invalid\n");
     }
     return 0;
 }
