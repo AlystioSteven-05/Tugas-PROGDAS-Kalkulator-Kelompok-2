@@ -52,7 +52,7 @@ float pangkat (float input1, float bil_pangkat){
 
 int main (){
     int pilihan;
-    int angka; // Perbaikan: Variabel angka diubah menjadi int
+    int angka;
     float input1, input2, result;
 
     do{
