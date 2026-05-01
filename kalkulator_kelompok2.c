@@ -38,8 +38,10 @@ float pembagian (float input1, float input2){
 }
 
 int ganjil_genap (int angka){
-    if (angka %2 == 0){
+    if (angka % 2 == 0){
         return 1;
+    } else {
+        return 0; 
     }
 }
 
@@ -50,10 +52,11 @@ float pangkat (float input1, float bil_pangkat){
 
 int main (){
     int pilihan;
-    float input1, input2, angka, result;
+    int angka; // Perbaikan: Variabel angka diubah menjadi int
+    float input1, input2, result;
 
     do{
-        displayheader ();
+        displayheader();
         printf("Masukkan Pilihan: ");
         scanf("%d", &pilihan);
 
@@ -68,8 +71,9 @@ int main (){
             result = penjumlahan(input1, input2);
             printf("Hasil %.2f + %.2f = %.2f\n", input1, input2, result);
             break;
+            
         case 2:
-        printf("\n===== Pengurangan =====\n");
+            printf("\n===== Pengurangan =====\n");
             printf("Masukkan Angka Pertama: ");
             scanf("%f", &input1);
             printf("Masukkan Angka Kedua: ");
@@ -78,6 +82,7 @@ int main (){
             result = pengurangan(input1, input2);
             printf("Hasil %.2f - %.2f = %.2f\n", input1, input2, result);
             break;
+            
         case 3:
             printf("\n===== Perkalian =====\n");
             printf("Masukkan Angka Pertama: ");
@@ -88,6 +93,7 @@ int main (){
             result = perkalian(input1, input2);
             printf("Hasil %.2f x %.2f = %.2f\n", input1, input2, result);
             break;
+            
         case 4:
             printf("\n===== Pembagian =====\n");
             printf("Masukkan Angka Pertama: ");
@@ -101,6 +107,8 @@ int main (){
             }else{
                 printf("Hasil %.2f / %.2f = %.2f\n", input1, input2, result);
             }
+            break;
+            
         case 5:
             printf("\n===== Ganjil/Genap =====\n");
             printf("Masukkan Angka: ");
@@ -112,20 +120,23 @@ int main (){
             }else{
                 printf("Angka %d adalah ganjil\n", angka);
             }
-        break;
+            break;
+            
         case 6:
             printf("\n===== Pangkat =====\n");
             printf("Masukkan kedua angka: ");
             scanf("%f %f", &input1, &input2);
             result = pangkat(input1, input2);
             printf("Hasil:  %.2f\n", result);
-        break;
+            break;
+            
         case 0:
-        printf("Terima Kasih\n");
-        break;
+            printf("Terima Kasih\n");
+            break;
+            
         default:
-        printf("Input Invalid\n");
-        break;
+            printf("Input Invalid\n");
+            break;
         }
     } while(pilihan != 0);
 
