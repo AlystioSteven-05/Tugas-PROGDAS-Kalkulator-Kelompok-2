@@ -79,7 +79,7 @@ int main (){
         printf("Hasil:  %.2f\n", result);
         break;
         case 5:
-        // Bikin fungsi ganjil_genap
+        // Buatkan fungsi ganjil_genap
         break;
         case 6:
         printf("Masukkan kedua angka: ");
@@ -94,7 +94,7 @@ int main (){
         printf("Input Invalid\n");
         break;
         }
-    }while(pilihan != 0);
+    } while(pilihan != 0);
 
     return 0;
 }
